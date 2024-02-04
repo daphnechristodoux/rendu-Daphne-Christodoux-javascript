@@ -1,0 +1,336 @@
+/* Styles pour le menu burger, qui est le même pour les 2 pages html, les js sont différents mais le CSS est commun */
+.burger-menu {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+/* Styles pour les barres du menu burger (commun aux 2 html) */
+.bar {
+  width: 15px;
+  height: 2px;
+  background-color: #333;
+  margin: 2px 0;
+  }
+
+/* Style du menu du Burger (commun aux 2 html)*/
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  background-color: rgb(249, 243, 231);
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
+
+/* définition ci-dessous affiche le contenu du Burger si class visible */
+.menu-container.visible {
+  display: block;
+}
+
+/* ci-dessous styles du texte du Burger une fois ouvert */
+.menu-item {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: orangered;
+/* orangered pour essayer d'être dans les tons de l'IIM, comme les images choisies */
+font-size: 14px;
+}
+
+.menu-item.active {
+  font-weight: bold;
+}
+
+
+.main-menu {
+  display: none;
+}
+
+
+.main-menu.show-menu {
+  display: block;
+}
+
+
+
+  .blue {
+    color: blue;
+}
+
+  #description {
+    font-size: 22px;
+    color:red
+  }
+
+  .title {
+    font-size: 22px;
+    color: green;
+}
+
+/* Styles par défaut pour les 2 pages utilisant ce CSS */
+* { 
+  font-size: 16px;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+/* Styles pour l'accordéon, telles que vues dans le doc du cours, on les garde même si accordéon a été remplacé par les Tabs */
+.accordeon {
+  border: 1px solid rgba(146, 146, 146, 0.3);
+  width: 80%;
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+.titre {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 16px rgba(146, 146, 146, 0.3);
+}
+
+.titre img {
+  width: 20px;
+  height: 20px;
+}
+
+.titre p {
+  font-weight:700;
+}
+
+.contenu {
+  padding: 0 20px;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: 0.4s;
+}
+
+.titre img {
+  width: 20px;
+  height: 20px;
+  transition: 0.4s;
+}
+
+.accordeon.open .titre img {
+  transform-origin: center;
+  transform: rotate(90deg);
+}
+
+.accordeon.open .contenu {
+  padding: 30px 20px;
+  height:auto;
+  visibility: visible;
+}
+
+.accordeon .titre {
+  cursor: pointer;
+}
+
+.accordeon .contenu {
+  padding: 20px;
+  overflow: hidden;
+  height: 0;
+  transition: height 0.4s ease-out;
+}
+
+.accordeon.open .contenu {
+  height: auto;
+}
+
+.accordeon .titre img {
+  transition: transform 0.4s ease-out;
+}
+
+/* Ajout du style pour le titre actif */
+.accordeon .titre.active {
+  background-color: #f0f0f0; 
+}
+
+
+body {
+  width: 80%;
+  margin: 80px auto;
+}
+
+form {
+  border: 1px solid rgba(153, 153, 153, 0.6);
+}
+
+form > div {
+  margin: 30px 20px;
+
+}
+
+label {
+  display:block;
+  margin-bottom: 8px;
+}
+
+input {
+  height: 20px;
+  width: 40%;
+}
+
+form .radio-group input[type="radio"] {
+  margin-right: 50px;
+  vertical-align: middle;
+}
+
+/* Styles qui s'appliquent à tous les éléments button des 2 html */
+button {
+  margin-left: 20px;
+  margin-bottom: 30px;
+  padding: 10px 32px;
+  cursor: pointer;
+}
+
+.message-error {
+  border: 1px solid rgba(212, 42, 0, 1);
+  color: rgb(212, 42, 0);
+  background-color: rgba(212, 42, 0, 0.4);
+  padding: 16px 32px;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.message-success {
+  border: 1px solid rgb(81, 150, 2);
+  color: rgb(81, 150, 2);
+  background-color: rgba(113, 212, 0, 0.4);
+  padding: 16px 32px;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.message-success.visible {
+  display: block;
+}
+
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 12px;
+}
+
+.success {
+  border: 1px rgb(81, 150, 2);
+  background-color: rgba(113, 212, 0, 0.4);
+}
+
+.message-error.visible {
+  display: block;
+}
+
+
+.swiper-slide {
+  height:77vh;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-dw {
+  background-image: url('developpementWeb5.jpg');
+  background-size: cover;
+}
+
+.slide-cd {
+  background-image: url('creationDesign3.jpg');
+  background-size: cover;
+}
+
+.slide-cdeb {
+  background-image: url('comDigitale3.jpg');
+  background-size: cover;
+}
+
+.slide-jpo {
+  background-image: url('IIM-jpo.jpg');
+  background-size: cover;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 72px;
+  color: white;
+  text-transform: lowercase;
+}
+
+body .swiper-pagination-bullet-active {
+  background: orangered;
+}
+
+body .swiper-button-next,
+body .swiper-button-prev {
+  color: orangered;
+}
+
+.slide-text {
+  font-size: 32px;
+  color: rgb(243, 237, 235);
+  font-weight: bold;
+}
+
+/* Style pour le bouton Dark Mode */
+#darkModeToggle {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style pour le Dark Mode */
+.dark-mode {
+  background-color: rgb(57, 57, 57);
+  color: #fff;
+}
+
+/* Ci-dessous styles pour les onglets */
+
+/* tabs contient tab active et tab */
+.tabs {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+}
+
+.tab.active {
+  background-color: grey;
+}
+
+/* Styles pour le contenu des onglets */
+
+/* Si pas actif, ne s'affiche pas */
+.content {
+  display: none;
+}
+
+/* Si actif, s'affiche, avec ces caractéristiques */
+.content.active {
+  display: block;
+  color: orangered;
+  font-weight: bold;
+}
+
+

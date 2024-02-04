@@ -1,0 +1,197 @@
+/* Style pour le bouton "Retour vers l'accueil" */
+.home-button {
+    background-color: rgb(255, 195, 43);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-decoration: none;
+    border: 2px solid rgb(255, 195, 43);
+    border-radius: 8px;
+    margin: 20px;
+    display: inline-block;
+  }
+
+  .blue {
+    color: blue;
+}
+
+  #description {
+    font-size: 22px;
+    color:red
+  }
+
+  .title {
+    font-size: 22px;
+    color: green;
+}
+
+* { 
+  font-size: 16px;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.accordeon {
+  border: 1px solid rgba(146, 146, 146, 0.3);
+  width: 80%;
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+.titre {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 16px rgba(146, 146, 146, 0.3);
+}
+
+.titre img {
+  width: 20px;
+  height: 20px;
+}
+
+.titre p {
+  font-weight:700;
+}
+
+.contenu {
+  padding: 0 20px;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: 0.4s;
+}
+
+.titre img {
+  width: 20px;
+  height: 20px;
+  transition: 0.4s;
+}
+
+.accordeon.open .titre img {
+  transform-origin: center;
+  transform: rotate(90deg);
+}
+
+.accordeon.open .contenu {
+  padding: 30px 20px;
+  height:auto;
+  visibility: visible;
+}
+
+body {
+  width: 80%;
+  margin: 80px auto;
+}
+
+form {
+  border: 1px solid rgba(153, 153, 153, 0.6);
+}
+
+form > div {
+  margin: 30px 20px;
+
+}
+
+label {
+  display:block;
+  margin-bottom: 8px;
+}
+
+input {
+  height: 20px;
+  width: 40%;
+}
+
+button {
+  margin-left: 20px;
+  margin-bottom: 30px;
+  padding: 10px 32px;
+  cursor: pointer;
+}
+
+.message-error {
+  border: 1px solid rgba(212, 42, 0, 1);
+  color: rgb(212, 42, 0);
+  background-color: rgba(212, 42, 0, 0.4);
+  padding: 16px 32px;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.message-success {
+  border: 1px solid rgb(81, 150, 2);
+  color: rgb(81, 150, 2);
+  background-color: rgba(113, 212, 0, 0.4);
+  padding: 16px 32px;
+  margin-bottom: 20px;
+  display: none;
+}
+
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 12px;
+}
+
+.success {
+  border: 1px rgb(81, 150, 2);
+  background-color: rgba(113, 212, 0, 0.4);
+}
+
+.message-error.visible {
+  display: block;
+}
+
+.swiper-slide {
+  height:60vh;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-dw {
+  background-image: url('macbook-pro.jpg');
+  background-size: cover;
+}
+
+.slide-cd {
+  background-image: url('macbook-air.jpg');
+  background-size: cover;
+}
+
+.slide-cdeb {
+  background-image: url('Imac.jpg');
+  background-size: cover;
+}
+
+
+.subtitle {
+  color: #fff;
+  font-size: 24px;
+  text-transform: lowercase;
+  letter-spacing: 3px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 72px;
+  color: white;
+  text-transform: lowercase;
+}
+
+body .swiper-pagination-bullet-active {
+  background: orangered;
+}
+
+body .swiper-button-next,
+body .swiper-button-prev {
+  color: orangered;
+}

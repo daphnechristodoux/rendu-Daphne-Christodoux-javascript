@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <link href="styles Common.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Début de la partie de définition du menu Burger, avec 3 barres horizontales les unes sur les autres -->
+    <!-- Le menu Burger de la page principale indique les 2 pages, et permet d'aller à la page du formulaire d'inscription -->
+    
+        <div class="burger-menu" id="burgerMenu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    
+    <div class="menu-container">
+        <a href="#" class="menu-item" data-target="accueil">Page d'accueil et de présentation des axes</a>
+        <a href="#" class="menu-item" data-target="inscription">Formulaire d'inscription</a>
+    </div>
+<!-- Fin de la partie de définition du menu Burger -->
+    
+<!-- Début de la partie de définition du slider -->
+    
+    <div class="swiper-mon-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide-dw">
+                <p class="title">axe : développement web</p>
+                <p class="slide-text">venez rencontrer notre équipe enseignante de développement web à l'occasion d'une prochaine jpo !</p>
+            </div>
+            <div class="swiper-slide slide-cd">
+                <p class="title">axe : création & design</p>
+                <p class="slide-text">laissez exprimer votre créativité !</p>
+            </div>
+            <div class="swiper-slide slide-cdeb">
+                <p class="title">axe : com' digitale</p>
+                <p class="slide-text">l'avenir est digital !</p>
+            </div>
+            <div class="swiper-slide slide-jpo">
+                <p class="title">journées portes ouvertes</p>
+                <p class="slide-text">journée portes ouvertes à Paris le 10 fevrier 2024</p>
+                <p class="slide-text">et à Nantes le 24 fevrier 2024</p>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <br>
+    <br>
+  <!-- Fin de la partie de définition du slider -->
+  
+  <!-- Début la partie de définition des Tabs -->
+    <ul class="tabs">
+        <li class="tab active" data-target="devweb">Développement Web</li>
+        <li class="tab" data-target="comdigitale">Com' Digitale</li>
+        <li class="tab" data-target="creationdesign">Création & Design</li>
+    </ul>
+    
+  <!-- onglet dev web est actif au lancement, et voici les 5 contenus de l'axe vus en cours -->
+    <div class="content devweb active">
+        <ul>
+            <li>Algo</li>
+            <li>HTML / CSS</li>
+            <li>Javascript</li>
+            <li>PHP / MySQL</li>
+            <li>Réseau</li>
+        </ul>
+    </div>
+
+<!-- 5 contenus de l'axe com digitale vus en cours -->
+    <div class="content comdigitale">
+        <ul>
+            <li>Marketing</li>
+            <li>Communication</li>
+            <li>Webmarketing</li>
+            <li>Brand Content</li>
+            <li>Content Marketing</li>
+        </ul>
+    </div>
+
+    <!-- 5 contenus de l'axe creation design trouvés sur le site internet de l'IIM -->
+    <div class="content creationdesign">
+        <ul>
+            <li>Culture Entertainment</li>
+            <li>Digital Publishing</li>
+            <li>Direction Artistique</li>
+            <li>Méthodologie Agile</li>
+            <li>Dessin</li>
+        </ul>
+    </div>
+  <!-- Fin la partie de définition des Tabs -->
+ 
+  <!-- Ci-dessous 2 break pour laisser 2 lignes d'espace jusqu'aux 2 boutons du footer -->
+  <br>
+  <br>
+
+  <!-- 2 boutons dans le footer, un pour un mini-dark mode, l'autre qui envoie à formulaire.html, en plus du menu Burger en haut de page -->
+      <footer>
+        <button id="darkModeToggle">Dark Mode</button>
+        <button id="openFormButton">Inscrivez-vous aux journées portes ouvertes</button>
+    </footer>
+
+    <div id="formulaireContainer"></div>
+
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> <!-- adresse indiquée dans le cours, pour le slider -->
+    <script src="main.js"></script> 
+
+    <!-- Le script ci-dessous permet d'envoyer vers la page formulaire.html en cliquant sur le bouton du footer -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sélectionnez le bouton par son ID
+            let openFormButton = document.getElementById('openFormButton');
+    
+            // Ajoutez un écouteur d'événement pour le clic sur le bouton
+            openFormButton.addEventListener('click', function() {
+                // Redirigez l'utilisateur vers le formulaire.html
+                window.location.href = 'formulaire.html';
+            });
+        });
+    </script>    
+
+</body>
+</html>

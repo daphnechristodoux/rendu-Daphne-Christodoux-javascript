@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link href="styles Common.css" rel="stylesheet">
+</head>
+<body>
+   
+    <div class="burger-menu" id="burgerMenu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    
+    <div class="menu-container">
+        <a href="#" class="menu-item" data-target="accueil">Page d'accueil et de présentation des axes</a>
+        <a href="#" class="menu-item" data-target="inscription">Formulaire d'inscription</a>
+    </div>
+
+
+      <h1 id="main-title">Bienvenue à l'IIM !</h1>
+      
+      <img src="IIM.png" alt="IIM Digital School" id="image">
+
+      
+<div class="message-error">
+    <ul>
+    </ul>
+</div>
+
+<div class="message-success">
+    <p id="successMessage"></p>
+</div>
+
+
+<form action="" method="post" enctype="multipart/form-data">
+    <div>
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" name="prenom" placeholder="Votre prénom"
+    </div>
+    <br>
+    <br>
+    <div>
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" placeholder="Votre Nom"
+    </div>
+    <br>
+    <br>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Votre email"
+    </div>
+    <br>
+    <br>
+    <div>
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" name="password" placeholder="Votre mot de passe"
+    </div>
+    <br>
+    <br>
+    <div>
+        <label for="password2">Entrez à nouveau votre mot de passe</label>
+        <input type="password" id="password2" name="password2" placeholder="Confirmez votre mot de passe"
+    </div>
+    <br>
+    <br>
+    
+    <div class="radio-group">
+        <label>Votre classe actuelle ?</label>
+        <label>
+            <input type="radio" name="classe" value="terminale"> Terminale
+        </label>
+        <label>
+            <input type="radio" name="classe" value="premiere"> Première
+        </label>
+        <label>
+            <input type="radio" name="classe" value="etudesSuperieures"> Etudes supérieures
+        </label>
+        <label>
+            <input type="radio" name="classe" value="autre"> Autre
+        </label>
+    </div>
+    
+    <br>
+    <br>
+    <div>
+        <label for="axe">Votre axe envisagé ?</label>
+        <select id="axe" name="axe">
+            <option value="" disabled selected>Choisissez un axe</option>
+            <option value="developpement_web">Axe développement web</option>
+            <option value="creation_design">Axe création & design</option>
+            <option value="com_digitale">Axe com' digitale et e-business</option>
+        </select>
+    </div>
+    <br>
+    <br>
+<button type="submit">Inscrivez-vous</button>
+
+</form>
+
+<footer>
+    <button id="darkModeToggle">Dark Mode</button>
+    <button id="revenirPageSlider">Revenir à la page principale</button>
+</footer>
+
+
+    <! Début du script Javascript >
+    <script src="formulaire.js"></script>
+
+    <!-- Le script ci-dessous permet de renvoyer vers la page principale (index.html) en cliquant sur le bouton du footer -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sélectionnez le bouton par son ID
+            let revenirPageSlider = document.getElementById('revenirPageSlider');
+    
+            // Ajoutez un écouteur d'événement pour le clic sur le bouton
+            revenirPageSlider.addEventListener('click', function() {
+                // Redirigez l'utilisateur vers la page du slider
+                window.location.href = 'index.html';
+            });
+        });
+    </script>    
+
+</body>
+</html>
